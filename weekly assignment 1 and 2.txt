@@ -1,0 +1,208 @@
+﻿Level 1
+
+
+1.
+public class HarryAge {
+    public static void main(String[] args) {
+        // Define fixed variables
+        int birthYear = 2000;
+        int currentYear = 2024;
+        
+        // Calculate age
+        int age = currentYear - birthYear;
+        
+        // Output the result
+        System.out.println("Harry's age in " + currentYear + " is " + age);
+    }
+}
+
+
+2.
+public class AverageMarks {
+    public static void main(String[] args) {
+        // Define the marks as variables
+        double mathMarks = 94.0;
+        double physicsMarks = 95.0;
+        double chemistryMarks = 96.0;
+        int totalSubjects = 3;
+        
+        // Calculate the average
+        double averagePercent = (mathMarks + physicsMarks + chemistryMarks) / totalSubjects;
+        
+        // Output the result
+        System.out.println("Sam's average mark in PCM is " + averagePercent);
+    }
+}
+
+
+3.
+public class DistanceConverter {
+    public static void main(String[] args) {
+        // Define fixed distance and conversion factor
+        double distanceInKm = 10.8;
+        double kmToMilesFactor = 1.6; // Hint: 1 km = 1.6 miles (approx)
+        
+        // Perform calculation
+        double distanceInMiles = distanceInKm / kmToMilesFactor;
+        
+        // Output the result
+        System.out.println("The distance " + distanceInKm + " km in miles is " + distanceInMiles);
+    }
+}
+
+
+
+
+4.
+public class ProfitCalculator {
+    public static void main(String[] args) {
+        // Define cost and selling price
+        double costPrice = 129.0;
+        double sellingPrice = 191.0;
+        
+        // Calculate profit and profit percentage
+        double profit = sellingPrice - costPrice;
+        double profitPercentage = (profit / costPrice) * 100;
+        
+        // Multi-line output using a single print statement
+        System.out.println("The Cost Price is INR " + costPrice + " and Selling Price is INR " + sellingPrice + 
+                           "\nThe Profit is INR " + profit + " and the Profit Percentage is " + profitPercentage);
+    }
+}
+
+
+
+
+Level 2
+
+
+1.
+import java.util.Scanner;
+
+
+public class BasicCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        // Take user inputs as floating point numbers
+        System.out.print("Enter first number: ");
+        float number1 = input.nextFloat();
+        
+        System.out.print("Enter second number: ");
+        float number2 = input.nextFloat();
+        
+        // Perform Arithmetic Operations
+        float addition = number1 + number2;
+        float subtraction = number1 - number2;
+        float multiplication = number1 * number2;
+        float division = number1 / number2;
+        
+        // Output the result
+        System.out.println("The addition, subtraction, multiplication, and division value of 2 numbers " 
+                           + number1 + " and " + number2 + " is " 
+                           + addition + ", " + subtraction + ", " + multiplication + ", and " + division);
+                           
+        input.close();
+    }
+}
+
+
+2.
+import java.util.Scanner;
+
+
+public class TriangleArea {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        // Take base and height in cm
+        System.out.print("Enter base in cm: ");
+        double baseCm = input.nextDouble();
+        
+        System.out.print("Enter height in cm: ");
+        double heightCm = input.nextDouble();
+        
+        // Calculate area in square cm
+        double areaSqCm = 0.5 * baseCm * heightCm;
+        
+        // Convert to square inches (1 inch = 2.54 cm, so 1 sq inch = 2.54 * 2.54 sq cm)
+        double cmPerInch = 2.54;
+        double areaSqInches = areaSqCm / (cmPerInch * cmPerInch);
+        
+        // Output the result
+        System.out.println("The Area of the triangle in sq in is " + areaSqInches + " and sq cm is " + areaSqCm);
+        
+        input.close();
+    }
+}
+
+
+3.
+import java.util.Scanner;
+
+
+public class SquareSide {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        // Take perimeter as input
+        System.out.print("Enter the perimeter of the square: ");
+        double perimeter = input.nextDouble();
+        
+        // Calculate the side (Perimeter = 4 * side)
+        int sidesInSquare = 4;
+        double sideLength = perimeter / sidesInSquare;
+        
+        // Output the result
+        System.out.println("The length of the side is " + sideLength + " whose perimeter is " + perimeter);
+        
+        input.close();
+    }
+}
+
+
+
+
+Level 3
+
+
+1.
+import java.util.Scanner;
+
+
+public class CelsiusToFahrenheit {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter temperature in Celsius: ");
+        double celsius = input.nextDouble();
+        
+        // Use formula: (°C * 9/5) + 32 = °F
+        double fahrenheitResult = (celsius * 9 / 5) + 32;
+        
+        System.out.println("The " + celsius + " celsius is " + fahrenheitResult + " fahrenheit");
+        
+        input.close();
+    }
+}
+
+
+2.
+import java.util.Scanner;
+
+
+public class FahrenheitToCelsius {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter temperature in Fahrenheit: ");
+        double fahrenheit = input.nextDouble();
+        
+        // Use formula: (°F - 32) * 5/9 = °C
+        double celsiusResult = (fahrenheit - 32) * 5 / 9;
+        
+        System.out.println("The " + fahrenheit + " fahrenheit is " + celsiusResult + " celsius");
+        
+        input.close();
+    }
+}
